@@ -30,7 +30,7 @@ if (Directory.GetFiles(path).Length > 0)
     {
         string nombreArchivo = Path.GetFileNameWithoutExtension(item);
         string extensionArchivo = Path.GetExtension(item);
-        string registro = $"{numeroRegistro} , {nombreArchivo} , {extensionArchivo}";
+        string registro = $"{numeroRegistro},{nombreArchivo},{extensionArchivo}";
         archivoWrite.WriteLine(registro);
         numeroRegistro++;
 
