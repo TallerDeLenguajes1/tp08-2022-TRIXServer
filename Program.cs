@@ -1,4 +1,5 @@
-﻿System.Console.WriteLine($"--\tDirectorio");
+﻿Console.Clear();
+System.Console.WriteLine($"--\tDirectorio");
 System.Console.WriteLine("--");
 int flagFolder = 0;
 string path;
@@ -8,6 +9,7 @@ do
     if (flagFolder > 0)
     {
         System.Console.WriteLine("El directorio ingresado no existe, reintente");
+        System.Console.WriteLine("--");
 
     }
 
@@ -44,7 +46,13 @@ if (Directory.GetFiles(path).Length > 0)
     var archivoRead = new StreamReader(File.Open("index.csv", FileMode.Open));
 
     System.Console.WriteLine(archivoRead.ReadToEnd());
+    System.Console.WriteLine("--");
 
     archivoRead.Close();
 
+}
+else
+{
+    System.Console.WriteLine("Carpeta vacia");
+    System.Console.WriteLine("--");
 }
